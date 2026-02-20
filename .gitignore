@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+.eggs/
+
+# Environnement virtuel
+env/
+venv/
+.venv/
+ENV/
+
+# Dataset généré (pas besoin de le versionner, le script le recrée)
+app/data/dataset_quiz.csv
+
+# Jupyter
+.ipynb_checkpoints/
+notebooks/.ipynb_checkpoints/
+
+# Images générées par le notebook
+notebooks/*.png
+*.png
+
+# Fichiers système
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# IDE
+.vscode/
+.idea/
+*.code-workspace
+
+# Logs
+*.log
+uvicorn.log

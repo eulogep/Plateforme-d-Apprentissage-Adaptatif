@@ -1,0 +1,17 @@
+fastapi>=0.109.0
+uvicorn[standard]>=0.27.0
+scikit-learn>=1.4.0
+pandas>=2.1.0
+numpy>=1.26.0
+pydantic>=2.5.0
+
+# Pour le notebook d'analyse
+jupyter>=1.0.0
+matplotlib>=3.8.0
+seaborn>=0.13.0
+
+# Optionnel mais utile pour le dev
+python-multipart>=0.0.6  # pour les form data
+httpx>=0.26.0            # pour tester l'API depuis le notebook
+
+# TODO: ajouter SQLAlchemy + une vraie BDD quand j'aurai le temps
