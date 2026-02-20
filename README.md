@@ -1,9 +1,15 @@
-<div align="center">
+# 🧠 Plateforme d'Apprentissage Adaptatif
 
-> Projet personnel développé dans le cadre de ma 3ème année à l'ESIEA.  
-> Une API qui adapte les quiz au niveau de l'utilisateur grâce au Machine Learning.
+**Une API qui s'adapte à ton niveau en temps réel — propulsée par Machine Learning**
 
-</div>
+![Python](https://img.shields.io/badge/Python-3.11+-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![FastAPI](https://img.shields.io/badge/FastAPI-0.109+-009688?style=for-the-badge&logo=fastapi&logoColor=white)
+![Scikit-learn](https://img.shields.io/badge/Scikit--learn-1.4+-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white)
+![Pandas](https://img.shields.io/badge/Pandas-2.1+-150458?style=for-the-badge&logo=pandas&logoColor=white)
+
+![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=flat-square)
+![Status](https://img.shields.io/badge/Status-En%20développement-orange?style=flat-square)
+![ESIEA](https://img.shields.io/badge/ESIEA-3A%20Projet%20Personnel-blue?style=flat-square)
 
 ---
 
@@ -21,7 +27,7 @@ J'avais déjà vu des systèmes similaires dans Duolingo ou Khan Academy, mais j
 
 ## ⚙️ Architecture du projet
 
-```
+```text
 learning-platform/
 ├── 📁 app/
 │   ├── main.py                  # FastAPI entrypoint + CORS + lifecycle
@@ -65,21 +71,21 @@ uvicorn app.main:app --reload
 
 L'API est disponible sur **`http://localhost:8000`**
 
-| Interface | URL |
-|-----------|-----|
-| 📖 Swagger UI (interactif) | `http://localhost:8000/docs` |
-| 📚 ReDoc | `http://localhost:8000/redoc` |
+| Interface                  | URL                            |
+| -------------------------- | ------------------------------ |
+| 📖 Swagger UI (interactif) | `http://localhost:8000/docs`   |
+| 📚 ReDoc                   | `http://localhost:8000/redoc`  |
 
 ---
 
 ## 🔌 Endpoints
 
-| Méthode | Route | Description |
-|---------|-------|-------------|
-| `GET` | `/api/questions?user_id=xxx` | Retourne une question adaptée au niveau |
-| `POST` | `/api/reponse` | Envoie une réponse, met à jour le profil |
-| `GET` | `/api/stats/{user_id}` | Stats de progression de l'utilisateur |
-| `POST` | `/api/reset/{user_id}` | Remet le profil à zéro |
+| Méthode | Route                         | Description                              |
+| ------- | ----------------------------- | ---------------------------------------- |
+| `GET`   | `/api/questions?user_id=xxx`  | Retourne une question adaptée au niveau  |
+| `POST`  | `/api/reponse`                | Envoie une réponse, met à jour le profil |
+| `GET`   | `/api/stats/{user_id}`        | Stats de progression de l'utilisateur   |
+| `POST`  | `/api/reset/{user_id}`        | Remet le profil à zéro                   |
 
 ### Exemple rapide
 
@@ -107,7 +113,7 @@ curl "http://localhost:8000/api/stats/user_001"
 
 ## 🤖 Comment fonctionne le modèle adaptatif ?
 
-```
+```text
 Réponse utilisateur
        │
        ▼
@@ -138,12 +144,12 @@ Réponse utilisateur
 
 ## 📊 Résultats
 
-| Métrique | Valeur |
-|----------|--------|
-| Accuracy train | ~92% |
-| Accuracy test | ~78% |
-| Validation croisée (5-fold) | 76% ± 2% |
-| Gain de progression vs séquentiel | **+15%** |
+| Métrique                           | Valeur    |
+| ---------------------------------- | --------- |
+| Accuracy train                     | ~92%      |
+| Accuracy test                      | ~78%      |
+| Validation croisée (5-fold)        | 76% ± 2%  |
+| Gain de progression vs séquentiel  | **+15%**  |
 
 > Les résultats sont obtenus sur des données simulées. Sur de vraies données utilisateurs, les performances seront différentes — c'est la prochaine étape.
 
@@ -174,19 +180,15 @@ Réponse utilisateur
 
 ## 📚 Stack technique
 
-| Composant | Technologie |
-|-----------|-------------|
-| API REST | FastAPI + Uvicorn |
-| ML | Scikit-learn (RandomForest) |
-| Data | Pandas + NumPy |
-| Validation | Pydantic v2 |
-| Analyse | Jupyter + Matplotlib + Seaborn |
+| Composant   | Technologie                     |
+| ----------- | ------------------------------- |
+| API REST    | FastAPI + Uvicorn               |
+| ML          | Scikit-learn (RandomForest)     |
+| Data        | Pandas + NumPy                  |
+| Validation  | Pydantic v2                     |
+| Analyse     | Jupyter + Matplotlib + Seaborn  |
 
 ---
 
-<div align="center">
-
-*Projet personnel — ESIEA 3A, 2025-2026*  
+*Projet personnel — ESIEA 3A, 2025-2026*
 *Fait avec ☕ et beaucoup de Stack Overflow*
-
-</div>
